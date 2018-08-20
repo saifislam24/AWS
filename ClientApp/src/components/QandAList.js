@@ -16,10 +16,8 @@ export class QandAList extends Component
     fetch('api/Values/TableData')
       .then(response => response.json())
       .then(data => {
-          console.log("Data : ",data);         
         this.setState({ forecasts: data, loading: false });
        var val = data.map(value => value.id);
-       console.log(val);
       });
   }
 
@@ -51,18 +49,12 @@ export class QandAList extends Component
   }
   editData(_id)
   {
-    //alert("child edit called");
-    //const { TextValue }  = this.state ;
     this.props.CallBackHook(_id)
 
   }
 
   delData(_id)
   {    
-    //alert(_id);
-    //var a = this.setState({forecasts : forecast.id})
-    //var id = parseInt(this.closest('tr').firstChild.textContent);
-    console.log(_id);
     fetch('https://localhost:5001/Api/Values/'+_id , {method: 'delete'})
     .then(function(response){
         if(response.ok){
