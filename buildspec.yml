@@ -10,4 +10,5 @@ phases:
   build:
     commands:
     commands: 
-      - "TARGET_ENV=\"${BUILD_ENV:-uat}\" - echo \"TARGET_ENV - uat\"    
+      - "TARGET_ENV=\"${BUILD_ENV:-uat}\""
+      - echo \"TARGET_ENV - uat\"    
