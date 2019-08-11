@@ -1,0 +1,14 @@
+# Tested using AWS CodeBuild
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - pip install troposphere
+      - pip install jinja2      
+      
+  build:
+    commands:
+     - TARGET_ENV="${BUILD_ENV:-uat}"
+      - echo "TARGET_ENV : $TARGET_ENV"
+      
