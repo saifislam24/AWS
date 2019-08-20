@@ -21,7 +21,6 @@ namespace guid_reactapp
 
         public IConfiguration Configuration { get; }
 
-
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<TableContext>(opt => opt.UseSqlite("Data Source=db_QandA2.db"));
